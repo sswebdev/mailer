@@ -1,13 +1,87 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*/
+
+html {
+	height: 100%;
+	/*Forces our background size cover to fit the screens full height.*/
+}
+
+body {
+	background: url(http://farm8.staticflickr.com/7187/6895047173_d7322ea7f0_o.jpg) center center no-repeat;
+	background-size: cover;
+	/*Background size cover will stretch a single background image to fit the entire width and height of it's parent container.*/
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+	color: #eee;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 100px auto 0 auto;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 48px;
+}
+
+h3 {
+	max-width: 420px;
+	font-weight: 300;
+}
+
+form {
+	width: 420px;
+	font-size: 24px;
+	padding: 60px 20px;
+}
+
+*:focus {
+  outline: 0;
+}
+
+label, input[type=text], input[type=submit] {
+	/*You can specify an input type using the synatx above. It lets you style things without adding classes to them.*/
+	display: block;
+	margin-bottom: 10px;
+}
+
+label {
+	color: #ccc;
+}
+
+input[type=email], input[type=submit] {
+padding: 10px;
+font-size: 24px;
+}
+
+input[type=email] {
+	border: 1px solid #ccc;
+}
+
+input[type=submit] {
+	background: #4F9EE8;
+	border: none;
+	color: white;
+}
+
+input[type=submit]:hover {
+	background: linear-gradient(#4F9EE8, #638BFF);
+}
+
+input[type=submit]:active {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+	/*inset box-shadow creates a shadow inside the border. The first number is our x value, the second is our y value, and third is blur. Fourth you can pass in color. Using rgba allows you to specify an RGB color plus an alpha, or opacity value between 0 and 1.*/
+}
