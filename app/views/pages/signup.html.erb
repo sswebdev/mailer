@@ -1,5 +1,10 @@
-<%= form_tag '/welcome', method: 'get' do %>
-  <%= label_tag :email, "Sign up here" %>
-  <%= email_field_tag :email, nil, placeholder: "hello@email.com" %>
-  <%= submit_tag "Yes please", class: "btn" %>
-<% end %>
+<div class="container">
+	<h1>Welcome to our site</h1>
+	<h3>We're dedicated to doing really cool things that you'll want to know more about.</h3>
+
+	<%= form_tag '/signup', method: 'get' do %>
+	  <%= label_tag :email, "Enter your email" %>
+	  <%= email_field_tag :email, nil, placeholder: "hello@youremail.com" %>
+	  <%= submit_tag "Sign me up!", class: "btn" %>
+	<% end %>
+</div>
